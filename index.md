@@ -2,7 +2,7 @@
 # Commands
 (Temporary measure) In order to use the `nxml` command in your command line interface, you first need to create an alias by :
 ```bash
-alias nxml = "python3 path-to-nxml_api-repo/nxml_api/src/nxml_api/nxml.py"
+alias nxml = "python3 path/to/nxml_api/repo/nxml_api/src/nxml_api/nxml.py"
 ```
 To get help from the command-line, simply call `nxml` to see the complete list of commands,
 then `--help` combined with any of those can give you more information.
@@ -18,14 +18,61 @@ In this section we will detail the workspace related commands.
 ### workspace 
 This command will help you load or create a machine learning workspace with the desired cloud provider.
 ```bash
-nxml workspace --create --provider "azure" --config "path/to/config/file"
+nxml workspace --create --provider azure --config path/to/config/file
 ```
 or to load an exisiting workspace
 ```bash
-nxml workspace --load --provider "azure" --config "path/to/config/file"
+nxml workspace --load --provider azure --config path/to/config/file
 ```
 ### Options : 
 * `--provider (-p)` : Cloud provider  [required]
 * `--config (-cf)` : Path to the workspace configuration file  [required]
 * `--create`/`--load` : Create a new workspace or load an existing one
  
+### Example of a config file :
+(To be added) 
+
+### workspace-show
+This command will show information about the requested workspace
+```bash
+nxml workspace-show --name my_workspace
+```
+
+### Options :
+* `--name (-n)`: Workspace name
+
+### workspace-list 
+This command will list the loaded workspaces 
+```bash
+nxml workspace-list
+```
+
+## Datasets : 
+In this section, we will detail the dataset related commands
+
+### dataset-attach 
+This command will let you attach a dataset to the working environment
+```bash
+nxml dataset-attach --config path/to/dataset/config
+```
+
+### Options :
+* `--config (-cf)` : path to the dataset configuration file.
+
+### Example of a dataset configuration file :
+(To be added) 
+
+### dataset-show
+This command will show information about the requested dataset
+```bash
+nxml dataset-show --name my_dataset
+```
+
+### Options :
+* `--name (-n)`: Dataset name
+
+### dataset-list 
+This command will list the loaded datasets 
+```bash
+nxml dataset-list
+```
