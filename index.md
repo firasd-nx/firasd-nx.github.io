@@ -1,14 +1,3 @@
----
-title: "Commands"
-draft: false
-type: docs
-layout: single
-
-menu:
-  docs:
-    weight: 30
----
-
 
 # Commands
 (Temporary measure) In order to use the `nxml` command in your command line interface, you first need to create an alias by :
