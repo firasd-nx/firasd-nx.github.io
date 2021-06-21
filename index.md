@@ -25,7 +25,7 @@ or to load an exisiting workspace
 nxml workspace --load --provider "azure" --config "path/to/config/file"
 ```
 ### Options : 
-* `-p`, `--provider` : Cloud provider  [required]
-* `-cf`, `--config` : Path to the workspace configuration file  [required]
+* `--provider (-v)` : Cloud provider  [required]
+* `--config (-cf)` : Path to the workspace configuration file  [required]
 * `--create`/`--load` : Create a new workspace or load an existing one
  
