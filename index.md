@@ -106,3 +106,56 @@ This command will list the set compute environments
 ```bash
 nxml compute-env-list
 ```
+
+## Experiment :
+Now we can run the ML experience in our workspace, on the set compute environment using the loaded dataset.
+
+### train
+```bash
+nxml train --script path/to/training/script.py --config path/to/experiment/config.json
+```
+### Options :
+* `--script (-s)` : path to the training script
+* `--config (-cf)` : path to the experiment configuration file
+
+### Example of an experiment configuration file :
+**(To be added)**
+
+### exp-list 
+This command will list created experiments
+```bash
+nxml exp-list
+```
+
+## Model :
+This section details the commands dealing with the trained model from the experiment.
+
+### model-register 
+This command will help you register a trained model to your workspace.
+```bash
+nxml model-register --model my_model --path path/to/register/model
+```
+### Options :
+* `--model (-m)` : model name
+* `--path (-p)` : path to register the model in 
+
+### model-download
+This command will help you download a trained model to your local machine.
+```bash
+nxml model-download --model my_model --path path/to/download/directory
+```
+### Options :
+* `--model (-m)` : model name
+* `--path (-p)` : path to the download directory
+
+## Prediction :
+
+### predict 
+Use a trained model to predict on a new dataset and output the predictions
+```bash
+nxml predict --model my_model --data my_data --output path/to/output/predictions
+```
+
+## Deployment :
+**(Still Under Construction)**
+
