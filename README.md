@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+---
+title: "Commands"
+draft: false
+type: docs
+layout: single
 
-You can use the [editor on GitHub](https://github.com/firasd-nx/firasd-nx.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+menu:
+  docs:
+    weight: 30
+---
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# Commands
+(Temporary measure) In order to use the `nxml` command in your command line interface, you first need to create an alias by :
+```bash
+alias nxml = "python3 path-to-nxml_api-repo/nxml_api/src/nxml_api/nxml.py"
 ```
+To get help from the command-line, simply call `nxml` to see the complete list of commands,
+then `--help` combined with any of those can give you more information.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Global options
 
-### Jekyll Themes
+* `--help (-h)` : Display help information.
+* `--version (-V)`: Display this application version.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/firasd-nx/firasd-nx.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Workspace : 
+In this section we will detail the workspace related commands.
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### workspace 
+This command will help you load or create a machine learning workspace with the desired cloud provider.
+```bash
+nxml workspace --create --provider "azure" --config "path/to/config/file"
+```
+or to load an exisiting workspace
+```bash
+nxml workspace --load --provider "azure" --config "path/to/config/file"
+```
+### Options : 
+ `-p`, `--provider` : Cloud provider  [required]
+ `-cf`, `--config` : Path to the workspace configuration file  [required]
+ `--create`/`--load` : Create a new workspace or load an existing one
+ 
