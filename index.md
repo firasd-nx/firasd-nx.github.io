@@ -156,6 +156,11 @@ Use a trained model to predict on a new dataset and output the predictions
 nxml predict --model my_model --data my_data --output path/to/output/predictions
 ```
 
+### Options :
+* `--model (-m)` : trained model name
+* `--data (-d)` : path to the data to be predicted on
+* `--output (-o)` : Output prediction file
+
 ## Deployment :
 **(Still Under Construction)**
 
