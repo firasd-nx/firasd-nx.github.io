@@ -157,10 +157,18 @@ nxml predict --model my_model --data my_data --output path/to/output/predictions
 ```
 
 ### Options :
-* `--model (-m)` : trained model name
+* `--uri (-m)` : Servicing URL
 * `--data (-d)` : path to the data to be predicted on
 * `--output (-o)` : Output prediction file
 
 ## Deployment :
-**(Still Under Construction)**
+Depoloy a trained/registered model. 
 
+```bash
+nxml predict --config path/to/configuration/file
+```
+### Options :
+* `--config (-c)` : path to the configuration file
+
+### Example of a deployment configuration file :
+**(To be added)**
