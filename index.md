@@ -162,7 +162,7 @@ nxml predict --model my_model --data my_data --output path/to/output/predictions
 * `--output (-o)` : Output prediction file
 
 ## Deployment :
-Depoloy a trained/registered model. 
+Deploy a trained/registered model. 
 
 ```bash
 nxml deploy --config path/to/configuration/file
