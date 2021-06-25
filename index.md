@@ -165,10 +165,10 @@ nxml predict --model my_model --data my_data --output path/to/output/predictions
 Depoloy a trained/registered model. 
 
 ```bash
-nxml predict --config path/to/configuration/file
+nxml deploy --config path/to/configuration/file
 ```
 ### Options :
-* `--config (-c)` : path to the configuration file
+* `--config (-c)` : path to the deployment configuration file
 
 ### Example of a deployment configuration file :
 **(To be added)**
